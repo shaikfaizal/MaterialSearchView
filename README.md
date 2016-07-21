@@ -226,6 +226,21 @@ It is a little bit tricky but can be achieved using this:
     </android.support.design.widget.AppBarLayout>
 
 </RelativeLayout>
+
+
+
+searchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
+    @Override
+    public void onSearchViewShown() {
+        //Do some magic
+        searchView.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onSearchViewClosed() {
+        //Do some magic
+    }
+});
 ```  
 # Bonus
 **Close on backpressed:**
